@@ -1,0 +1,13 @@
+{
+  "name": "flextools-documentation",
+  "version": "1.0.0",
+  "description": "[Go to the Main Documentation Page](src/docs/index.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd src2 && python -m mkdocs build",
+    "serve": "cd src2 && python -m mkdocs serve"
+  },
+  "author": "",
+  "license": "ISC"
+}

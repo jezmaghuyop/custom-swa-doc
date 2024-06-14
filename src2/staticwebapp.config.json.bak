@@ -1,0 +1,49 @@
+{
+  "routes": [
+    {
+      "route": "/.auth/login/aad",
+      "statusCode": 200
+    },
+    {
+      "route": "/.auth/login/aad/callback",
+      "statusCode": 200
+    },
+    {
+      "route": "/.auth/logout",
+      "statusCode": 302,
+      "redirect": "/"
+    },
+    {
+      "route": "/",
+      "rewrite": "/index.html",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/*",
+      "rewrite": "/index.html",
+      "allowedRoles": ["authenticated"]
+    }
+  ], 
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "aadb2c": {
+          "registration": {
+            "clientIdSettingName": "AZURE_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://flextoolsb2c.b2clogin.com/flextoolsb2c.onmicrosoft.com/B2C_1_SiIn/oauth2/v2.0/authorize"
+            }
+          },
+          "login": {
+            "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+            "scopes": ["openid", "profile", "email", "offline_access ", "https://graph.microsoft.com/user.read"],
+            "loginParameterNames": []
+          }
+        }
+      }
+    }
+  }
+}
