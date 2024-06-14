@@ -58,7 +58,7 @@
             }
           },
           "login": {
-            "nameClaimType": "emails",
+            "nameClaimType": "email",
             "scopes": [],
             "loginParameterNames": []
           },
