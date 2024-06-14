@@ -32,6 +32,14 @@
       "redirect": "/.auth/login/aadb2c"
     }
   },
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": [
+      "/src2/docs/images/*.{png,jpg,gif,ico}",
+      "/src2/docs/img/*.{png,jpg,gif,ico}",      
+      "/*.{css,scss,js}"
+    ]
+  },
   "auth": {
     "rolesSource": "/api/Roles",
     "identityProviders": {
