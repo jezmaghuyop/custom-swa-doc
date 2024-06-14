@@ -30,10 +30,13 @@
     "401": {
       "statusCode": 302,
       "redirect": "/.auth/login/aadb2c"
+    },
+    "404": {
+      "rewrite": "/src2/site/404.html"
     }
   },
   "navigationFallback": {
-    "rewrite": "index.html",
+    "rewrite": "src2/site/index.html",
     "exclude": [
       "/src2/docs/images/*.{png,jpg,gif,ico}",
       "/src2/docs/img/*.{png,jpg,gif,ico}",      
