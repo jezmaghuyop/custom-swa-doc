@@ -32,7 +32,7 @@
       "redirect": "/.auth/login/aadb2c"
     },
     "404": {
-      "rewrite": "/src2/site/404.html"
+      "rewrite": "/404.html"
     }
   },
   "navigationFallback": {
